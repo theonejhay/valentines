@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Day Card</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:ital,wght@1,400&display=swap" rel="stylesheet">
+    <script src="js/heart.js" defer></script>
+    <link rel="stylesheet" href="heart.css">
+</head>
+<body class="min-h-screen bg-gradient-to-br from-pink-100 via-red-50 to-pink-200 flex items-center justify-center p-4 overflow-hidden">
+    <div class="heart-bg" style="top: 10%; left: 10%; animation-delay: 0s;">
+    <img src="img/dildo.png" alt="confetti" />
+    </div>
+    <div class="heart-bg" style="top: 70%; left: 80%; animation-delay: 1s;">
+        <img src="img/dildo.png" alt="confetti" />
+    </div>
+    <div class="heart-bg" style="top: 30%; left: 85%; animation-delay: 2s;">
+        <img src="img/dildo.png" alt="confetti" />
+    </div>
+    <div class="heart-bg" style="top: 80%; left: 15%; animation-delay: 1.5s;">
+        <img src="img/dildo.png" alt="confetti" />
+    </div>
+    <div class="heart-bg" style="top: 50%; left: 5%; animation-delay: 0.5s;">
+        <img src="img/dildo.png" alt="confetti" />
+    </div>
+
+    
+<!-- Main Container -->
+    <div class="relative z-10">
+
+<div id="introScreen" class="bg-white/80 backdrop-blur-lg rounded-2xl shadow-2xl p-10 text-center space-y-6 w-80 mx-auto">
+    <h1 class="text-2xl font-bold text-pink-600">Would you go on a date?</h1>
+    <p class="text-gray-600 text-sm">Mo open ka or mo open ka?</p>
+
+    <div class="flex justify-center gap-4">
+       <button id="openBtn"
+            class="px-6 py-2 bg-pink-500 text-white rounded-full shadow-md relative">
+            Yes
+        </button>
+        <button id="closeBtn"
+            class="px-6 py-2 bg-gray-400 hover:bg-gray-500 text-white rounded-full shadow-md transition">
+            No
+        </button>
+    </div>
+</div>
+
+
+<div id="refreshContainer" class="hidden flex justify-center gap-4 mb-6">
+    <button id="refreshBtn1" class="refresh-btn1"></button>
+    <button id="refreshBtn2" class="refresh-btn2"></button>
+    <button id="refreshBtn3" class="refresh-btn3"></button>
+    <button id="refreshBtn4" class="refresh-btn4"></button>
+</div>
+
+
+        <!-- Envelope -->
+        <div id="envelope" class="envelope mx-auto  envelope-wiggle hidden">
+            <div class="card p-6 overflow-y-auto">
+                <div class="text-center space-y-4 fade-in">
+                    <div class="text-6xl heart-float">💌</div>
+                </div>
+            </div>
+            
+            <div class="envelope-body"></div>
+            <div class="envelope-flap"></div>
+            <div class="envelope-seal cursor-pointer hover:scale-110 transition-transform duration-300 rounded-full w-20 h-20 flex items-center justify-center">
+                <span class="font-semibold text-white text-xs tracking-wide">OPEN</span>
+            </div>
+        </div>
+        
+        <!-- instruction -->
+        <div id="instruction" class="text-center mt-8 transition-opacity duration-500">
+        </div>
+    </div>
+    <!-- Confetti Container -->
+    <div id="confetti-container" class="fixed inset-0 pointer-events-none z-50"></div>
+
+    <!-- Full  Modal -->
+    <div id="modal-overlay" class="modal-overlay">
+        <div class="modal-content">
+            <div class="sticky top-0 right-0 flex justify-end p-4 bg-gradient-to-b from-white to-transparent">
+                <button id="close-modal" class="close-btn bg-pink-500 hover:bg-pink-600 text-white rounded-full w-10 h-10 flex items-center justify-center shadow-lg">
+                    ✕
+                </button>
+            </div>
+            
+            <div class="px-6 pb-8 md:px-12 md:pb-12">
+                <!-- Header -->
+                <div class="text-center space-y-4 mb-8">
+                    <div class="text-7xl heart-float">💌</div>
+                    <h1 class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-pink-600 to-red-600 bg-clip-text text-transparent dancing-script">
+                        Happy Valentine's Day!
+                    </h1>
+                    <div class="w-24 h-1 bg-gradient-to-r from-pink-400 to-red-400 mx-auto rounded-full"></div>
+                </div>
+
+                <!-- Main Content -->
+                <div class="space-y-6 max-w-3xl mx-auto">
+                    <p class="text-gray-700 leading-relaxed text-center text-3xl dancing-script">
+                        To My Lovey,
+                    </p>
+                    
+                    <p class="text-gray-600 leading-relaxed text-center">
+                        On this day of love and affection, I wanted to take a moment to tell you how much you mean to me. 
+                        Your smile brightens my darkest days, your laughter is my favorite melody, and your presence makes 
+                        everything better.
+                    </p>
+
+                    <!-- Image Gallery -->
+                    <div class="image-gallery my-8">
+                        <div class="image-item1">
+                            <img src="https://images.unsplash.com/photo-1606800052052-a08af7148866?w=500&h=500&fit=crop" alt="Rose bouquet" />
+                            <span class="pop-word pop-left">Bloom!</span>
+                        </div>
+                        <div class="image-item2">
+                            <img src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=500&h=500&fit=crop" alt="Couple holding hands" />
+                            <span class="pop-word pop-right">Together!</span>
+                        </div>
+                        <div class="image-item3">
+                            <img src="https://images.unsplash.com/photo-1606800052052-a08af7148866?w=500&h=500&fit=crop" alt="Love letters" />
+                            <span class="pop-word pop-left">Forever!</span>
+                        </div>
+                        <div class="image-item4">
+                            <img src="https://images.unsplash.com/photo-1606800052052-a08af7148866?w=500&h=500&fit=crop" alt="Heart balloons" />
+                            <span class="pop-word pop-right">Love!</span>
+                        </div>
+                    </div>
+
+                    <div class="flex justify-center gap-3 text-3xl my-6">
+                        <span class="heart-float" style="animation-delay: 0.1s;">❤️</span>
+                        <span class="heart-float" style="animation-delay: 0.2s;">💕</span>
+                        <span class="heart-float" style="animation-delay: 0.3s;">💖</span>
+                        <span class="heart-float" style="animation-delay: 0.4s;">💗</span>
+                        <span class="heart-float" style="animation-delay: 0.5s;">💝</span>
+                    </div>
+                    
+                    <p class="text-gray-600 leading-relaxed text-center">
+                        Thank you for being you, for every moment we've shared, and for all the memories yet to come. 
+                        You make every day feel like Valentine's Day. Every laugh, every smile, every quiet moment together 
+                        is a treasure I hold close to my heart.
+                    </p>
+
+                    <div class="bg-gradient-to-r from-pink-50 to-red-50 p-6 rounded-2xl border-2 border-pink-200 my-8">
+                        <p class="text-gray-700 text-center italic leading-relaxed">
+                            "In all the world, there is no heart for me like yours. In all the world, there is no love for you like mine."
+                        </p>
+                    </div>
+
+                    <p class="text-gray-600 leading-relaxed text-center">
+                        Here's to us, to love, and to a lifetime of beautiful moments together. You are my yesterday, my today, 
+                        and all of my tomorrows, My Tabonky
+                    </p>
+                    
+                    <div class="text-center mt-8">
+                        <p class="text-pink-600 font-semibold dancing-script text-3xl">
+                            With all my love ♡
+                        </p>
+                        <p class="text-gray-500 mt-4 text-sm">Happy Valentine's Day</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
